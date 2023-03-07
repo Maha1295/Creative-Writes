@@ -67,7 +67,7 @@ const Details = () => {
           }}
           type="text"
           value={comment}
-          placeholder="Send a message...🚀"
+          placeholder="post a comment...🚀"
           className="w-full p-2 text-sm rounded-lg"
         />
         <button onClick={commentSubmitHandler} className="bg-gray-600 rounded-lg text-white text-sm mx-2 p-1">Submit</button>

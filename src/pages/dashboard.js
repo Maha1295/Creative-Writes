@@ -59,7 +59,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Your Posts</h1>
+      <h1 className="font-bold">Your Thoughts</h1>
       {currentUserPosts.length === 0 ? (
         <div className="bg-gray-600 text-white p-8 border-b-2 rounded-lg mx-2 my-2">
           No Posts to display....
@@ -85,13 +85,6 @@ const Dashboard = () => {
           </Message>
         ))
       )}
-
-      <button
-        className="font-medium text-white bg-gray-800 py-2 px-4 my-6"
-        onClick={() => auth.signOut()}
-      >
-        Sign Out
-      </button>
     </div>
   );
 };

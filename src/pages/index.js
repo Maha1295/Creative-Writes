@@ -10,6 +10,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import Link from "next/link";
+import {FaRegComments} from 'react-icons/fa';
 export default function Home() {
   // State for all the posts
   const [allPosts, setAllPosts] = useState([]);
@@ -60,8 +61,8 @@ export default function Home() {
         {allPosts.map((post) => (
           <Message key={post.id} {...post}>
             <Link href={{ pathname: `/${post.id}`, query: {...post}}}>
-              <button className="text-sm">
-               {post.comments?.length > 0 ? post.comments?.length : 0} Comments
+              <button className="text-sm flex">
+               {post.comments?.length > 0 ? post.comments?.length : 0} Comments <FaRegComments className="ml-2 align-middle text-center"/>
               </button>
             </Link>
 
