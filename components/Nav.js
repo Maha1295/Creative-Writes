@@ -6,14 +6,14 @@ const Nav = () => {
   const [user, loading] = useAuthState(auth);
 
   return (
-    <nav className="flex justify-between items-center py-10 ">
+    <nav className="flex justify-between items-center p-2 mt-2 rounded-lg bg-gray-400">
       <Link href="/">
         <button className="text-lg font-medium">Good Thoughts</button>
       </Link>
       <ul className="flex items-center gap-10">
         {!user && (
           <Link href="/auth/login">
-            <button className="py-2 px-4 text-sm bg-gray-500 text-white rounded-lg font-medium ml-8 ">
+            <button className="sm:px-1 py-2 px-4 text-sm bg-white text-black rounded-lg font-medium ml-8 ">
               Join Now
             </button>
           </Link>
@@ -21,12 +21,12 @@ const Nav = () => {
         {user && (
           <>
             <Link href={"/posts"}>
-              <button className="py-2 px-4 text-sm bg-gray-500 text-white rounded-lg font-medium ml-8 ">
+              <button className="sm:px-1 py-2 px-4 text-sm bg-gray-500 text-white rounded-lg font-medium ml-8 ">
                  Post Thoughts
               </button>
             </Link>
             <button
-              className="py-2 px-4 text-sm bg-gray-500 text-white rounded-lg font-medium"
+              className="sm:px-1 py-2 px-4 text-sm bg-gray-500 text-white rounded-lg font-medium"
               onClick={() => auth.signOut()}
             >
               Sign Out

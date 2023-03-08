@@ -32,7 +32,7 @@ const Login = () => {
     
 
   return (
-    <div className='shadow-xl mt-8 p-10 text-gray-700 rounded-lg'>
+    <div className='shadow-xl mt-8 p-10 text-gray-700 rounded-lg bg-white'>
         <h2 className='text-2xl font-medium'>
             Join Today
         </h2>
